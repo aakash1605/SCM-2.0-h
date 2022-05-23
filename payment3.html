@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .submit-now-btn {
+            cursor: pointer;
+            color: #fff;
+            height: 30px;
+            width: 240px;
+            border: none;
+            margin: 5px 30px;
+            background-color: rgb(242, 240, 247);
+            border-radius: 20px;
+        }
+        a:link {
+            color: rgb(25, 218, 25);
+            text-decoration: none;
+}
+    </style>
+<script type="text/javascript">
+        function acupan() {
+            alert("yet u have no coupon");
+        }
+
+        function netbanking() {
+            alert("plz use credit or debit card");
+        }
+
+        function chkA() {
+            //VALIDATION
+            //var aStr=document.getElementById("txtA").value;
+            var refA = document.querySelector("#txtA");
+
+            var refErr = document.querySelector("#errA");
+
+
+            var aStr = refA.value;
+            //if(aStr.length==0)
+            if (aStr.trim() == "") {
+                refErr.innerHTML = "Fill value";
+                refErr.style.color = "red";
+                refA.style.border = "red 4px solid";
+            } else
+            if (isNaN(aStr)) // is Not A Number
+            {
+                refErr.innerHTML = "Fill Numeric Plz";
+                refErr.style.color = "red";
+                refA.style.backgroundColor = "red";
+
+            } else {
+                refErr.innerHTML = "okay";
+                refErr.style.color = "green";
+                refA.style.border = "green 4px solid";
+                refA.style.backgroundColor = "white";
+
+            }
+        }
+
+        function chkb() {
+            var refA = document.querySelector("#txtb");
+
+            var refErr = document.querySelector("#errb");
+
+
+            var aStr = refA.value;
+            //if(aStr.length==0)
+            if (aStr.trim() == "") {
+                refErr.innerHTML = "Fill value";
+                refErr.style.color = "red";
+                refA.style.border = "red 4px solid";
+            } else
+            if (isNaN(aStr)) // is Not A Number
+            {
+                refErr.innerHTML = "Fill Numeric Plz";
+                refErr.style.color = "red";
+                refA.style.backgroundColor = "red";
+
+            } else {
+                refErr.innerHTML = "okay";
+                refErr.style.color = "green";
+                refA.style.border = "green 4px solid";
+                refA.style.backgroundColor = "white";
+
+            }
+        }
+
+        function chkc() {
+            var refA = document.querySelector("#txtc");
+
+            var refErr = document.querySelector("#errc");
+
+
+            var aStr = refA.value;
+            //if(aStr.length==0)
+            if (aStr.trim() == "") {
+                refErr.innerHTML = "Fill value";
+                refErr.style.color = "red";
+                refA.style.border = "red 4px solid";
+            } else
+            if (isNaN(aStr)) // is Not A Number
+            {
+                refErr.innerHTML = "enter valid cvv number";
+                refErr.style.color = "red";
+                refA.style.backgroundColor = "red";
+
+            } else {
+                refErr.innerHTML = "okay";
+                refErr.style.color = "green";
+                refA.style.border = "green 4px solid";
+                refA.style.backgroundColor = "white";
+
+            }
+
+        }
+
+        function chkd() {
+            var refA = document.querySelector("#txtd");
+
+            var refErr = document.querySelector("#errd");
+
+
+            var aStr = refA.value;
+            //if(aStr.length==0)
+            if (aStr.trim() == "") {
+                refErr.innerHTML = "Fill value";
+                refErr.style.color = "red";
+                refA.style.border = "red 4px solid";
+            } else
+            if (isNaN(aStr)) // is Not A Number
+            {
+                refErr.innerHTML = "okay";
+                refErr.style.color = "green";
+                refA.style.border = "green 4px solid";
+                refA.style.backgroundColor = "white";
+
+            } else {
+                refErr.innerHTML = "enter Name..";
+                refErr.style.color = "red";
+                refA.style.backgroundColor = "red";
+
+            }
+
+        }
+
+        function cardholder() {
+            alert("name of card holder");
+        }
+    </script>
+</head>
+<body>
+    <form>
+            <div class="container">
+        <h1>Payment Gateway</h1>
+        <h2 style="text-align: center;font-size: 20px;">Pay using Credit / Debit card</h2>
+        <div class="first-row">
+            <div class="owner">
+                <h3>Card Holder Name</h3>
+                <div class="input-field">
+                    <input type="text" placeholder="Enter Your Name" id="txtd" onblur="chkd();" required />
+                    <span id="errd">*</span>
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password" placeholder="XXX" id="txtc" onblur="chkc();" required />
+                    <span id="errc">*</span>
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="input-field">
+                    <input type="text" placeholder="####-####-####-####" id="txtA" onblur="chkA();" required />
+                    <span id="errA">*</span>
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>Expiry Date</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                    <select name="years" id="years">
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <img src="mc.png" alt="">
+                    <img src="vi.jpeg" alt="">
+                    <img src="pp.jpeg" alt="">
+                </div>
+            </div>    
+        </div>
+        <button type="submit"  class="submit-now-btn" ><a href="paysucces.html">
+            Submit</a>
+        </button>
+    </div>
+    </form>
+</body>
+</html>
