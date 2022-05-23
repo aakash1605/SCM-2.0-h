@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b6b9586b26.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <div id="sign_in">
+        <form method="post" action="Home.html">
+          <span>Sign In</span>
+          <div id="field">
+            <label><i class="fas fa-user"></i></label>
+            <input type="text" placeholder="Username" required />
+          </div>
+  
+          <div id="field">
+            <label><i class="fas fa-lock"></i></label>
+            <input type="password" placeholder="Password" required />
+          </div>
+  
+          <div id="field">
+            <input type="submit" value="Log in" />
+          </div>
+        </form>
+  
+        <p>
+          Not a member?
+          <button onclick="signUp()"><a href="signup.html">Sign up now</a></button>
+          <i class="fas fa-arrow-right"></i>
+        </p>
+      </div>
+</body>
+</html>
